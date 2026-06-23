@@ -1,0 +1,72 @@
+:root {
+    --rosa-pastel: #FFD1DC;
+    --azul-claro: #B2E2F2;
+    --amarelo-suave: #FEF9E7;
+    --texto: #5D4037;
+}
+
+body {
+    background-color: var(--amarelo-suave);
+    color: var(--texto);
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+}
+
+.logo { font-family: 'Pacifico', cursive; color: #D81B60; }
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: white;
+    border-bottom: 5px solid var(--rosa-pastel);
+}
+
+.menu-principal a {
+    text-decoration: none;
+    margin-right: 15px;
+    color: var(--texto);
+    font-weight: bold;
+}
+.decoracao {
+    position: fixed;
+    font-size: 2rem;
+    z-index: -1;
+    opacity: 0.4;
+    animation: flutuar 3s infinite ease-in-out;
+}
+
+.deco-1 { top: 10%; left: 5%; }
+.deco-2 { top: 70%; right: 5%; }
+
+@keyframes flutuar {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+.grid-receitas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.card:hover {
+    transform: scale(1.05); /* O card cresce um pouco */
+}
+
+.card img { width: 100%; height: 200px; object-fit: cover; }
+.tag {
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    margin-right: 10px;
+}
+.baixo { background: #C8E6C9; color: #2E7D32; }
+/* .alto { background: #FFCCBC; color: #D84315; } */
